@@ -1,0 +1,24 @@
+# transition过渡
+
+## 1、属性
+
+- transition-property：设置过渡效果的CSS属性的名称
+  - width
+  - height
+  - all
+- transition-duration：设置过度完成需要多少秒或毫秒
+  - 单位s或ms
+- transition-delay：设置过渡效果何时开始。
+  - 延迟：数值为正
+  - 提前：数值为负
+- transition-timing-function：规定速度效果的速度曲线
+  - 匀速：linear
+  - 逐渐慢：ease(默认)
+  - cubic-bezier.com
+
+## 2、注意
+
+transition不要在伪类hover中设置，因为鼠标一离开过渡会失效
+
+## 3、案例
+

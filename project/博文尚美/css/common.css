@@ -1,0 +1,30 @@
+*{margin:0;padding: 0;}
+ul,ol{list-style: none;}
+a{text-decoration: none;color: #999999;}
+h1,h2,h3{font-size: 16px;}
+body{}
+img{ display: block;}
+/* 浮动设置 */
+.l{ float: left;}
+.r{ float: right;}
+.clear:after{ content: "";display: block;clear: both;}
+/* 版心 */
+.container{width: 1080px;margin: 0 auto;position: relative;}
+/* 通栏 */
+.container-fluid{width: 100%;}
+
+#head{}
+#head .head_logo{width: 170px;height: 80px;}
+#head .head_menu{}
+#head .head_menu li{float: left;width: 100px;height: 80px;line-height: 80px; text-align: center;}
+#head .head_menu li a:hover{color: #66c5b4;}
+
+.area_title{ margin-top: 52px; text-align: center;}
+.area_title h2{height: 30px;font-size: 18px;line-height: 30px;color: #6d6d6d;background: url(../images/titbg.jpg) no-repeat center;}
+.area_title p{color: #9d9d9d;font-size: 14px;line-height: 25px;}
+
+#copyright {background-color: #66C5B4; height: 54px;}
+#copyright span{color: white;line-height: 54px; font-size: 12px;}
+#copyright ul{}
+#copyright li{float: left;font-size: 12px; margin-left: 10px;color: white;line-height: 54px;}
+#copyright a{color: white;}

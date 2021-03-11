@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <style>
+        #banner {
+            clear: both;
+        }
+
+        #banner .banner_list {
+            width: 100%;
+            height: 500px;
+            position: relative;
+        }
+
+        #banner .banner_list li {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            z-index: 1;
+            background: url(./images/banner1.jpg) center 0 no-repeat;
+        }
+
+
+
+        #banner .banner_list li.active {
+            opacity: 1;
+            z-index: 10;
+        }
+
+        #banner .banner_list a {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        #banner .banner_btn {
+            position: absolute;
+            /* left: 723px; */
+            /* bottom: 19px; */
+            top: 550px;
+            z-index: 20;
+            font-size: 0;
+            text-align: center;
+            width: 100%;
+        }
+
+        #banner .banner_btn li {
+            display: inline-block;
+            border: white solid 2px;
+            border-radius: 50%;
+            width: 11px;
+            height: 11px;
+            box-sizing: border-box;
+            margin-left: 11px;
+            cursor: pointer;
+        }
+
+
+        #banner .banner_btn li.active {
+            background-color: white;
+        }
+
+        #service {
+            /* box-sizing: border-box; */
+            overflow: hidden;
+            min-height: 428px;
+        }
+
+        #service .service_list {
+            margin-top: 33px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #service .service_list li {
+            width: 250px;
+            height: 244px;
+        }
+
+        #service .service_list li div {
+            width: 250px;
+            height: 120px;
+        }
+
+        #service .service_list li:nth-of-type(1) div {
+            background: url(./images/web2.png) no-repeat center;
+        }
+
+        #service .service_list li:nth-of-type(2) div {
+            background: url(./images/web2.png) no-repeat center;
+        }
+
+        #service .service_list li:nth-of-type(3) div {
+            background: url(./images/web2.png) no-repeat center;
+        }
+
+        #service .service_list li:nth-of-type(4) div {
+            background: url(./images/web2.png) no-repeat center;
+        }
+
+        #service .service_list h3 {
+            font-size: 20px;
+            line-height: 30px;
+            text-align: center;
+            margin: 8px 0 12px;
+            font-weight: 700;
+        }
+
+        #service .service_list p {
+            width: 250px;
+            height: 40px;
+            font-size: 14px;
+            text-align: center;
+            line-height: 22px;
+            color: #999999;
+        }
+
+        #case {
+            /* background-color: #F8F8F8; */
+            height: 462px;
+
+        }
+
+        #case .case_list {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 43px;
+        }
+
+        #case .case_btn {
+
+            width: 165px;
+            height: 35px;
+            background-color: #53B5A3;
+            margin: 40px auto 0 auto;
+            /* padding-top: 40px; */
+            border-radius: 20px;
+            line-height: 35px;
+            font-size: 20px;
+        }
+
+        #case .case_btn a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            color: white;
+        }
+
+        #case .case_btn a:hover {
+            text-decoration: underline;
+        }
+
+        #news {
+            min-height: 413px;
+            overflow: hidden;
+            /* margin-top: 50px; */
+        }
+
+        #news .area_title {
+            margin-bottom: 50px;
+        }
+
+        #news dt {
+            width: 234px;
+        }
+
+        #news dd {
+            width: 844px;
+        }
+
+        #news .news_list {
+            width: 100%;
+        }
+
+        #news .news_list li {
+            width: 50%;
+            float: left;
+            margin-bottom: 40px;
+        }
+
+        #news .news_date {
+            width: 74px;
+            height: 74px;
+            border-right: 1px solid #E3E3E3;
+            text-align: center;
+        }
+
+        #news .news_date i {
+            display: block;
+            font-size: 36px;
+            line-height: 50px;
+            font-style: normal;
+            font-weight: 700;
+            color: #66c5b4;
+        }
+
+        #news .news_date span {
+            font-size: 18px;
+            line-height: 27px;
+            color: #999999;
+        }
+
+        #news .news_text {
+            width: 330px;
+            height: 74px;
+            padding-left: 15px;
+        }
+
+        #news .news_text a {
+            font-size: 14px;
+            color: black;
+            line-height: 21px;
+            text-align: left;
+        }
+
+        #news .news_text p {
+            color: #a9a9a9;
+            font-size: 12px;
+            line-height: 22px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="head" class="container">
+        <div class="head_logo l">
+            <a href="#">
+                <img src="./images/logo.png" alt="博文尚美" title="博文尚美">
+            </a>
+        </div>
+        <ul class="head_menu r">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">关于我们</a></li>
+            <li><a href="#">客户端案例</a></li>
+            <li><a href="#">服务项目</a></li>
+            <li><a href="#">新闻资讯</a></li>
+            <li><a href="#">联系我们</a></li>
+        </ul>
+    </div>
+    <div id="banner" class="container-fluid">
+        <ul class="banner_list">
+            <li class="active"><a href="#"></a></li>
+            <li><a href="#"></a></li>
+        </ul>
+        <ol class="banner_btn">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+    </div>
+    <div id="service" class="container">
+        <div class="area_title">
+            <h2>服务范围</h2>
+            <p>OUR SERVICES</p>
+        </div>
+        <ul class="service_list">
+            <li>
+                <div></div>
+                <h3>1.WEB DESIGN</h3>
+                <p>企业品牌网站设计 / 手机网站制作<br>动画网站创意设计</p>
+            </li>
+            <li>
+                <div></div>
+                <h3>2.GRAPHIC DESIGN</h3>
+                <p>标志 LOGO 设计 / 产品宣传册设计<br>企业广告 / 海报设计</p>
+            </li>
+            <li>
+                <div></div>
+                <h3>3.E-BUSINESS PLAN</h3>
+                <p>淘宝 / 天猫装修设计及运营推广<br>
+                    企业微博 / 微信营销</p>
+            </li>
+            <li>
+                <div></div>
+                <h3>4.MAILBOX AGENTS</h3>
+                <p>腾讯 / 网易企业邮箱品牌代理<br>
+                    个性化邮箱定制开发</p>
+            </li>
+        </ul>
+    </div>
+    <div id="case" class="container-fluid">
+        <div class="container">
+            <div class="area_title">
+                <h2>［ 客户案例 ］</h2>
+                <p>With the best professional technology, to design the best innovative web site</p>
+            </div>
+            <ul class="case_list">
+                <li>
+                    <a href=""><img src="./images/20141121095528549.jpg" alt=""></a>
+                </li>
+                <li>
+                    <a href=""><img src="./images/20141121095528549.jpg" alt=""></a>
+                </li>
+                <li>
+                    <a href=""><img src="./images/20141121095528549.jpg" alt=""></a>
+                </li>
+            </ul>
+            <div class="case_btn">
+                <a href="#">view more</a>
+            </div>
+        </div>
+
+
+    </div>
+    <div id="news" class="container">
+        <div class="area_title">
+            <h2>最新资讯</h2>
+            <p>TEH LATEST NEWS</p>
+        </div>
+
+        <dl class="news_list">
+            <dt class="l">
+                <img src="./images/xs1.jpg" alt="">
+            </dt>
+            <dd class="l">
+                <ul class="news_list">
+                    <li>
+                        <div class="news_date l">
+                            <i>09</i>
+                            <span>Jan</span>
+                        </div>
+                        <div class="news_text l">
+                            <a href="#">漳州西恩视觉婚纱摄影网站建设</a>
+                            <p>漳州西恩视觉婚纱摄影隶属西恩视觉文化传播有限公司旗下婚纱摄影品牌，由国内著名摄影师冬晖 CHAN...</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="news_date l">
+                            <i>09</i>
+                            <span>Jan</span>
+                        </div>
+                        <div class="news_text l">
+                            <a href="#">漳州西恩视觉婚纱摄影网站建设</a>
+                            <p>漳州西恩视觉婚纱摄影隶属西恩视觉文化传播有限公司旗下婚纱摄影品牌，由国内著名摄影师冬晖 CHAN...</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="news_date l">
+                            <i>09</i>
+                            <span>Jan</span>
+                        </div>
+                        <div class="news_text l">
+                            <a href="#">漳州西恩视觉婚纱摄影网站建设</a>
+                            <p>漳州西恩视觉婚纱摄影隶属西恩视觉文化传播有限公司旗下婚纱摄影品牌，由国内著名摄影师冬晖 CHAN...</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="news_date l">
+                            <i>09</i>
+                            <span>Jan</span>
+                        </div>
+                        <div class="news_text l">
+                            <a href="#">漳州西恩视觉婚纱摄影网站建设</a>
+                            <p>漳州西恩视觉婚纱摄影隶属西恩视觉文化传播有限公司旗下婚纱摄影品牌，由国内著名摄影师冬晖 CHAN...</p>
+                        </div>
+                    </li>
+                </ul>
+            </dd>
+        </dl>
+    </div>
+    <div id="copyright" class="container-fluid">
+        <div class="container">
+            <span class="l">Copyright 2006- 2014 Bowenshangmei Culture All Rights Reserved</span>
+            <ul class="r">
+                <li><a href="">Home</a></li>
+                <li>|</li>
+                <li><a href="">About</a></li>
+                <li>|</li>
+                <li><a href="">Portfolio</a></li>
+                <li>|</li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+
+</html>
